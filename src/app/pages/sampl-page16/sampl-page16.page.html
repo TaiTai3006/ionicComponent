@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Avatar & thumbnail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+  <ion-reorder-group (ionItemReorder)="handleReorder($any($event))" disabled="false">
+    <ion-item>
+      <ion-label>item1</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+    <ion-item>
+      <ion-label>item2</ion-label>
+        <ion-reorder slot="end">
+          <ion-icon  name="pizza"></ion-icon>
+        </ion-reorder>
+    </ion-item>
+    
+    <ion-reorder>
+     <ion-item>
+      <ion-label>item3l</ion-label>
+     </ion-item>
+    </ion-reorder>
+    
+  </ion-reorder-group>
+</ion-list>
+</ion-content>
